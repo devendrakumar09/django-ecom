@@ -17,7 +17,7 @@ class DiscountSerializers(serializers.HyperlinkedModelSerializer):
         fields = "__all__"
     
 
-#  // PRODUCT serializers
+# PRODUCT serializers
 class ProductSerializers(serializers.HyperlinkedModelSerializer):
     product_id = serializers.ReadOnlyField()
     class Meta:

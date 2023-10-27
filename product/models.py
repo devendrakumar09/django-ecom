@@ -1,5 +1,7 @@
 from django.db import models
 
+
+# CATEGORY MODEL
 class CategoryModel(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
@@ -7,6 +9,7 @@ class CategoryModel(models.Model):
     modified_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(auto_now=True)
 
+# DISCOUNT MODEL
 class DiscountModel(models.Model):
     id = models.AutoField(primary_key=True)
     discount = models.IntegerField()
@@ -14,7 +17,7 @@ class DiscountModel(models.Model):
     modified_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(auto_now=True)
 
-# Create your models here.
+# PRODUCT MODEL.
 class ProductModel(models.Model):
     product_id = models.AutoField(primary_key=True)
     addby = models.IntegerField(null=True)
