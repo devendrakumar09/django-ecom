@@ -1,5 +1,19 @@
 from django.db import models
 
+class CategoryModel(models.Model):
+    id = models.AutoField(primary_key=True)
+    title = models.CharField(max_length=100)
+    create_at = models.DateTimeField(auto_now=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(auto_now=True)
+
+class DiscountModel(models.Model):
+    id = models.AutoField(primary_key=True)
+    discount = models.IntegerField()
+    create_at = models.DateTimeField(auto_now=True)
+    modified_at = models.DateTimeField(auto_now=True)
+    deleted_at = models.DateTimeField(auto_now=True)
+
 # Create your models here.
 class ProductModel(models.Model):
     product_id = models.AutoField(primary_key=True)
